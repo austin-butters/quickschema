@@ -1,0 +1,15 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build"],
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "outDir": "build",
+    "skipLibCheck": true,
+    "strict": true,
+    "declaration": true
+  }
+}

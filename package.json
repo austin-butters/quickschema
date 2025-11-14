@@ -1,0 +1,50 @@
+{
+  "name": "@austin-butters/quickschema",
+  "version": "1.0.0",
+  "description": "Builds JSON Schema for rigid APIs with interface-like shorthand.",
+  "author": "Austin Butters",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austin-butters/quickschema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/austin-butters/quickschema/issues"
+  },
+  "keywords": [
+    "json",
+    "schema",
+    "quickschema"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "import": "./build/index.js"
+    }
+  },
+  "files": [
+    "build/",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "devDependencies": {
+    "json-schema": "^0.4.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/json-schema": "^7.0.15"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "test": "npm run build && node --test tests/**/*.test.js",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
+  }
+}
